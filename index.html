@@ -1,11 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>História & Memória — Lembranças de um Passado Verde</title>
+  <style>
+    :root{
+      --verde:#2E7D32;
+      --verde-escuro:#1B5E20;
+      --bege:#F8F4EC;
+      --marrom:#5D4631;
+      --branco:#ffffff;
+      --sombra: 0 4px 20px rgba(0,0,0,.12);
+      --radius: 14px;
+    }
+    *{box-sizing:border-box; margin:0; padding:0}
+    body{
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: var(--bege);
+      color: var(--marrom);
+      line-height:1.6;
+    }
+    header{
+      background: var(--verde);
+      color: var(--branco);
+      padding: 20px;
+      text-align: center;
+      box-shadow: var(--sombra);
+    }
+    header .logo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+    }
+    header svg{
+      width:56px;
+      height:56px;
+    }
+    header h1{
+      font-size: 1.9rem;
+      font-weight:700;
+    }
+    header p{
+      font-size: 1rem;
+      opacity:.9;
+    }
+    .intro{
+      max-width:900px;
+      margin:30px auto;
+      padding:20px;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--sombra);
+      text-align:center;
+    }
+    .intro h2{
+      color:var(--verde-escuro);
+      margin-bottom:10px;
+    }
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap:18px;
+      padding:30px;
+      max-width:1300px;
+      margin:auto;
+    }
+    .logo{
+        border-radius: 100%;
+    }
+    .gallery figure{
+      background: var(--branco);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--sombra);
+      display:flex;
+      flex-direction:column;
+      transition: transform .3s ease;
+    }
+    .gallery figure:hover{
+      transform: translateY(-6px);
+    }
+    .gallery img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery figcaption{
+      padding:14px;
+      font-size:0.95rem;
+      color:var(--verde-escuro);
+    }
+    .gallery h3{
+      margin:0 0 6px;
+      font-size:1.1rem;
+      color:var(--marrom);
+    }
+    .desc{
+      font-size:0.85rem;
+      color:#444;
+      background:#fdfcf9;
+      padding:8px 10px;
+      border-radius:8px;
+    }
+    footer{
+      text-align:center;
+      padding:24px;
+      font-size:0.9rem;
+      color:#555;
+      background:#eee;
+      margin-top:30px;
+    }
+  </style>
 </head>
 <body>
-    
+  <header>
+    <div class="logo">
+     <img class="logo" width="65px" height="65px" src="src/arvore.jpg" alt="">
+      <div>
+        <h1>História & Memória</h1>
+        <p>Lembranças de um Passado Verde</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>Bem-vindo</h2>
+    <p>Este espaço é um mural dedicado a preservar e compartilhar lembranças de um passado verde, onde a história se encontra com a memória. Aqui você encontra fotos do antes e depois de lugares marcantes, acompanhadas de suas descrições.</p>
+  </section>
+
+  <main>
+    <section class="gallery">
+      <!-- 16 fotos com descrição -->
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+1" alt="Foto 1">
+        <figcaption>
+          <h3>Praça Central</h3>
+          <p class="desc">Antes tomada pelo concreto, hoje revitalizada com árvores e bancos para convivência.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+2" alt="Foto 2">
+        <figcaption>
+          <h3>Margem do Rio</h3>
+          <p class="desc">A mata ciliar recomposta devolveu vida ao rio e trouxe sombra às suas margens.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+3" alt="Foto 3">
+        <figcaption>
+          <h3>Escola Verde</h3>
+          <p class="desc">O jardim vertical tornou o espaço escolar mais fresco e acolhedor.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+4" alt="Foto 4">
+        <figcaption>
+          <h3>Mercado Antigo</h3>
+          <p class="desc">Local histórico restaurado, unindo tradição e modernidade.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+5" alt="Foto 5">
+        <figcaption>
+          <h3>Jardim da Comunidade</h3>
+          <p class="desc">Um espaço coletivo de cultivo e lazer, símbolo de união.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+6" alt="Foto 6">
+        <figcaption>
+          <h3>Biblioteca</h3>
+          <p class="desc">O prédio ganhou luz natural e áreas verdes para estudo.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+7" alt="Foto 7">
+        <figcaption>
+          <h3>Teatro Municipal</h3>
+          <p class="desc">Recuperado para receber apresentações culturais em um espaço vivo.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+8" alt="Foto 8">
+        <figcaption>
+          <h3>Rua das Flores</h3>
+          <p class="desc">Antes sem cor, agora arborizada e florida para quem caminha.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+9" alt="Foto 9">
+        <figcaption>
+          <h3>Estação Antiga</h3>
+          <p class="desc">Espaço histórico convertido em centro de memória local.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+10" alt="Foto 10">
+        <figcaption>
+          <h3>Ponte Histórica</h3>
+          <p class="desc">Reformada, conectando tradição e novos tempos.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+11" alt="Foto 11">
+        <figcaption>
+          <h3>Horto Municipal</h3>
+          <p class="desc">Recuperado como espaço de educação ambiental.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+12" alt="Foto 12">
+        <figcaption>
+          <h3>Coreto</h3>
+          <p class="desc">Símbolo da cidade restaurado para encontros culturais.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+13" alt="Foto 13">
+        <figcaption>
+          <h3>Antiga Fábrica</h3>
+          <p class="desc">Transformada em espaço criativo e de inovação.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+14" alt="Foto 14">
+        <figcaption>
+          <h3>Lagoa</h3>
+          <p class="desc">Requalificada, devolveu lazer e contato com a natureza.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+15" alt="Foto 15">
+        <figcaption>
+          <h3>Museu</h3>
+          <p class="desc">Modernizado sem perder a essência da memória local.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/500x300?text=Foto+16" alt="Foto 16">
+        <figcaption>
+          <h3>Parque da Cidade</h3>
+          <p class="desc">Um espaço verde que simboliza o futuro sustentável.</p>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> História & Memória — Lembranças de um Passado Verde
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
