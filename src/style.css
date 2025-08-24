@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+    :root{
+      --verde:#2E7D32;
+      --verde-escuro:#1B5E20;
+      --bege:#F8F4EC;
+      --marrom:#5D4631;
+      --branco:#ffffff;
+      --sombra: 0 4px 20px rgba(0,0,0,.12);
+      --radius: 14px;
+    }
+    *{box-sizing:border-box; margin:0; padding:0}
+    body{
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: var(--bege);
+      color: var(--marrom);
+      line-height:1.6;
+    }
+    header{
+      background: var(--verde);
+      color: var(--branco);
+      padding: 20px;
+      text-align: center;
+      box-shadow: var(--sombra);
+    }
+    header .logo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+    }
+    header h1{
+      font-size: 1.9rem;
+      font-weight:700;
+    }
+    header p{
+      font-size: 1rem;
+      opacity:.9;
+    }
+    .logo{
+        border-radius: 100%;
+    }
+    .intro{
+      max-width:900px;
+      margin:30px auto;
+      padding:20px;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--sombra);
+      text-align:center;
+    }
+    .intro h2{
+      color:var(--verde-escuro);
+      margin-bottom:10px;
+    }
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap:18px;
+      padding:30px;
+      max-width:1300px;
+      margin:auto;
+    }
+    .gallery figure{
+      background: var(--branco);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--sombra);
+      display:flex;
+      flex-direction:column;
+      transition: transform .3s ease;
+    }
+    .gallery figure:hover{
+      transform: translateY(-6px);
+    }
+    .antes-depois{
+      display:flex;
+      gap:8px;
+      padding:10px;
+    }
+    .antes-depois div{
+      flex:1;
+      text-align:center;
+    }
+    .antes-depois img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+    }
+    .label{
+      font-size:0.85rem;
+      font-weight:600;
+      margin-top:4px;
+      color:var(--verde-escuro);
+    }
+    .gallery figcaption{
+      padding:14px;
+      font-size:0.95rem;
+      color:var(--verde-escuro);
+    }
+    .gallery h3{
+      margin:0 0 6px;
+      font-size:1.1rem;
+      color:var(--marrom);
+    }
+    .desc{
+      font-size:0.85rem;
+      color:#444;
+      background:#fdfcf9;
+      padding:8px 10px;
+      border-radius:8px;
+    }
+    footer{
+      text-align:center;
+      padding:24px;
+      font-size:0.9rem;
+      color:#555;
+      background:#eee;
+      margin-top:30px;
+    }
