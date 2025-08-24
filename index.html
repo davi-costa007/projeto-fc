@@ -34,10 +34,6 @@
       justify-content:center;
       gap:12px;
     }
-    header svg{
-      width:56px;
-      height:56px;
-    }
     header h1{
       font-size: 1.9rem;
       font-weight:700;
@@ -45,6 +41,9 @@
     header p{
       font-size: 1rem;
       opacity:.9;
+    }
+    .logo{
+        border-radius: 100%;
     }
     .intro{
       max-width:900px;
@@ -61,14 +60,11 @@
     }
     .gallery{
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
       gap:18px;
       padding:30px;
       max-width:1300px;
       margin:auto;
-    }
-    .logo{
-        border-radius: 100%;
     }
     .gallery figure{
       background: var(--branco);
@@ -82,11 +78,27 @@
     .gallery figure:hover{
       transform: translateY(-6px);
     }
-    .gallery img{
+    .antes-depois{
+      display:flex;
+      gap:8px;
+      padding:10px;
+    }
+    .antes-depois div{
+      flex:1;
+      text-align:center;
+    }
+    .antes-depois img{
       width:100%;
-      height:200px;
+      height:160px;
       object-fit:cover;
+      border-radius:8px;
       display:block;
+    }
+    .label{
+      font-size:0.85rem;
+      font-weight:600;
+      margin-top:4px;
+      color:var(--verde-escuro);
     }
     .gallery figcaption{
       padding:14px;
@@ -118,7 +130,7 @@
 <body>
   <header>
     <div class="logo">
-     <img class="logo" width="65px" height="65px" src="src/arvore.jpg" alt="">
+      <img class="logo" width="65px" height="65px" src="src/arvore.jpg" alt="">
       <div>
         <h1>História & Memória</h1>
         <p>Lembranças de um Passado Verde</p>
@@ -133,114 +145,273 @@
 
   <main>
     <section class="gallery">
-      <!-- 16 fotos com descrição -->
+      <!-- 16 cards com antes e depois -->
       <figure>
-        <img src="src/Design sem nome(1).png" alt="Foto 1">
+        <div class="antes-depois">
+          <div>
+            <img src="img/Captura de tela 2025-08-24 081414.png" alt="Praça Central Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="img/Captura de tela 2025-08-24 081246.png" alt="Praça Central Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
-          <h3>Praça Central</h3>
+          <h3>Escola Maria Aguiar Ubajara-CE</h3>
           <p class="desc">Antes tomada pelo concreto, hoje revitalizada com árvores e bancos para convivência.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+2" alt="Foto 2">
+        <div class="antes-depois">
+          <div>
+            <img src="img/Captura de tela 2025-08-24 103139.png" alt="Margem do Rio Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="img/Captura de tela 2025-08-24 103206.png" alt="Margem do Rio Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
-          <h3>Margem do Rio</h3>
+          <h3>Jaburuna Ubajara-CE</h3>
           <p class="desc">A mata ciliar recomposta devolveu vida ao rio e trouxe sombra às suas margens.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+3" alt="Foto 3">
+        <div class="antes-depois">
+          <div>
+            <img src="img/img.antes1.jpg" alt="Escola Verde Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="img/img.depois1.jpg" alt="Escola Verde Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
-          <h3>Escola Verde</h3>
+          <h3>Nova Veneza Ubajara-CE</h3>
           <p class="desc">O jardim vertical tornou o espaço escolar mais fresco e acolhedor.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+4" alt="Foto 4">
+        <div class="antes-depois">
+          <div>
+            <img src="img/img.antes2.jpg" alt="Mercado Antigo Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="img/img.depois2.jpg" alt="Mercado Antigo Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
-          <h3>Mercado Antigo</h3>
+          <h3>Praça do Turismo Ubajara-CE</h3>
           <p class="desc">Local histórico restaurado, unindo tradição e modernidade.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+5" alt="Foto 5">
+        <div class="antes-depois">
+          <div>
+            <img src="img/img.antes3.jpg" alt="Jardim da Comunidade Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="img/Imagem do WhatsApp de 2025-08-19 à(s) 11.15.22_feacadb6.jpg" alt="Jardim da Comunidade Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
-          <h3>Jardim da Comunidade</h3>
+          <h3>Sítio Tucuns Ubajara-CE</h3>
           <p class="desc">Um espaço coletivo de cultivo e lazer, símbolo de união.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+6" alt="Foto 6">
+        <div class="antes-depois">
+          <div>
+            <img src="img/Imagem do WhatsApp de 2025-08-17 à(s) 19.10.25_d13b2232.jpg" alt="Biblioteca Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="img/Imagem do WhatsApp de 2025-08-17 à(s) 19.11.22_4335258f.jpg" alt="Biblioteca Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
-          <h3>Biblioteca</h3>
+          <h3>Ubajara-CE</h3>
           <p class="desc">O prédio ganhou luz natural e áreas verdes para estudo.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+7" alt="Foto 7">
+        <div class="antes-depois">
+          <div>
+            <img src="img/Imagem do WhatsApp de 2025-08-17 à(s) 19.04.02_39396d37.jpg" alt="Teatro Municipal Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="img/Imagem do WhatsApp de 2025-08-17 à(s) 19.04.01_9032b843.jpg" alt="Teatro Municipal Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
-          <h3>Teatro Municipal</h3>
+          <h3>Jaburuna Ubajara-CE</h3>
           <p class="desc">Recuperado para receber apresentações culturais em um espaço vivo.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+8" alt="Foto 8">
+        <div class="antes-depois">
+          <div>
+            <img src="src/antes8.jpg" alt="Rua das Flores Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="src/depois8.jpg" alt="Rua das Flores Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
           <h3>Rua das Flores</h3>
           <p class="desc">Antes sem cor, agora arborizada e florida para quem caminha.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+9" alt="Foto 9">
+        <div class="antes-depois">
+          <div>
+            <img src="src/antes9.jpg" alt="Estação Antiga Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="src/depois9.jpg" alt="Estação Antiga Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
           <h3>Estação Antiga</h3>
           <p class="desc">Espaço histórico convertido em centro de memória local.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+10" alt="Foto 10">
+        <div class="antes-depois">
+          <div>
+            <img src="src/antes10.jpg" alt="Ponte Histórica Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="src/depois10.jpg" alt="Ponte Histórica Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
           <h3>Ponte Histórica</h3>
           <p class="desc">Reformada, conectando tradição e novos tempos.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+11" alt="Foto 11">
+        <div class="antes-depois">
+          <div>
+            <img src="src/antes11.jpg" alt="Horto Municipal Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="src/depois11.jpg" alt="Horto Municipal Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
           <h3>Horto Municipal</h3>
           <p class="desc">Recuperado como espaço de educação ambiental.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+12" alt="Foto 12">
+        <div class="antes-depois">
+          <div>
+            <img src="src/antes12.jpg" alt="Coreto Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="src/depois12.jpg" alt="Coreto Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
           <h3>Coreto</h3>
           <p class="desc">Símbolo da cidade restaurado para encontros culturais.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+13" alt="Foto 13">
+        <div class="antes-depois">
+          <div>
+            <img src="src/antes13.jpg" alt="Antiga Fábrica Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="src/depois13.jpg" alt="Antiga Fábrica Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
           <h3>Antiga Fábrica</h3>
           <p class="desc">Transformada em espaço criativo e de inovação.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+14" alt="Foto 14">
+        <div class="antes-depois">
+          <div>
+            <img src="src/antes14.jpg" alt="Lagoa Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="src/depois14.jpg" alt="Lagoa Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
           <h3>Lagoa</h3>
           <p class="desc">Requalificada, devolveu lazer e contato com a natureza.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+15" alt="Foto 15">
+        <div class="antes-depois">
+          <div>
+            <img src="src/antes15.jpg" alt="Museu Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="src/depois15.jpg" alt="Museu Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
           <h3>Museu</h3>
           <p class="desc">Modernizado sem perder a essência da memória local.</p>
         </figcaption>
       </figure>
+
       <figure>
-        <img src="https://via.placeholder.com/500x300?text=Foto+16" alt="Foto 16">
+        <div class="antes-depois">
+          <div>
+            <img src="src/antes16.jpg" alt="Parque da Cidade Antes">
+            <p class="label">Antes</p>
+          </div>
+          <div>
+            <img src="src/depois16.jpg" alt="Parque da Cidade Depois">
+            <p class="label">Depois</p>
+          </div>
+        </div>
         <figcaption>
           <h3>Parque da Cidade</h3>
           <p class="desc">Um espaço verde que simboliza o futuro sustentável.</p>
