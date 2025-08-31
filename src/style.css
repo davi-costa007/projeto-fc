@@ -14,7 +14,7 @@
     }
     *{box-sizing:border-box; margin:0; padding:0}
     body{
-      font-family: 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: var(--bege);
       color: var(--marrom);
       line-height:1.6;
