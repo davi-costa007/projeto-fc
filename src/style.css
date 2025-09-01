@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -14,7 +16,7 @@
     }
     *{box-sizing:border-box; margin:0; padding:0}
     body{
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Roboto, sans-serif;
       background: var(--bege);
       color: var(--marrom);
       line-height:1.6;
@@ -30,15 +32,22 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:12px;
+      gap:20px;
+
     }
     header h1{
+      font-family: "Updock", cursive;
+      font-weight: 400;
+      font-style: normal;
       font-size: 1.9rem;
-      font-weight:700;
+      font-size: 45px;
     }
+
     header p{
       font-size: 1rem;
       opacity:.9;
+      font-size: 20px;
+      line-height: 0.5;
     }
     .logo{
         border-radius: 100%;
