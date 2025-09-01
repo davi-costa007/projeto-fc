@@ -26,12 +26,16 @@
       padding: 20px;
       text-align: center;
       box-shadow: var(--sombra);
+      height: 19vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     header .logo{
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:20px;
+      gap:4px;
 
     }
     header h1{
@@ -39,17 +43,19 @@
       font-weight: 400;
       font-style: normal;
       font-size: 1.9rem;
-      font-size: 45px;
+      font-size: 50px;
     }
 
     header p{
       font-size: 1rem;
       opacity:.9;
       font-size: 20px;
-      line-height: 0.5;
+      line-height: 0.1;
+      margin-bottom: 12px;
     }
     .logo{
         border-radius: 100%;
+        margin-top: 12px;
     }
     .intro{
       max-width:900px;
@@ -63,6 +69,7 @@
     .intro h2{
       color:var(--verde-escuro);
       margin-bottom:10px;
+      font-size: 25px;
     }
     .gallery{
       display:grid;
