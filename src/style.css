@@ -52,6 +52,7 @@
       font-size: 20px;
       line-height: 0.1;
       margin-bottom: 12px;
+      font-size: 18px;
     }
     .logo{
         border-radius: 100%;
@@ -122,6 +123,7 @@
       margin:0 0 6px;
       font-size:1.1rem;
       color:var(--marrom);
+     
     }
     .desc{
       font-size:0.85rem;
@@ -130,6 +132,65 @@
       padding:8px 10px;
       border-radius:2px;
     }
+
+    .categoria{
+      width: 100%;
+      height: 10vh;
+      background-color: #eee ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .categoria .CH{
+      color: var(--verde-escuro);
+    }
+
+    .cat{
+      border: 2px solid #1b5e1fd5;
+      width: 100%;
+      text-align: center;
+      background-color:  #44444418;
+      font: 700;
+      
+    }
+
+    .professores{
+      width: 100%;
+      height: 10vh;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .professores .prof1{
+      
+    }
+
+    .professores .profs{
+      color: var(--verde-escuro);
+    }
+     
+    .profs2{
+       border: 2px solid #1b5e1fd5;
+      width: 100%;
+      text-align: center;
+      background-color:  #44444418;
+      font: 700;
+    }
+
+    .alunos{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      
+    }
+
     footer{
       text-align:center;
       padding:24px;
@@ -137,4 +198,8 @@
       color:#555;
       background:#eee;
       margin-top:30px;
+      color: var(--marrom);
+      font: 700;
     }
+
+
