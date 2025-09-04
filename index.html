@@ -276,17 +276,18 @@
         padding: 20px 10px;
       }
 
+      /* MANTÉM as fotos lado a lado em tablets */
       .antes-depois{
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 6px;
       }
 
       .antes-depois div{
-        width: 100%;
+        width: 50%;
       }
 
       .antes-depois img{
-        height: 200px;
+        height: 140px;
       }
 
       .intro{
@@ -313,12 +314,42 @@
         padding: 15px 5px;
       }
 
+      /* MANTÉM as fotos lado a lado mesmo em celulares pequenos */
+      .antes-depois{
+        flex-direction: row;
+        gap: 4px;
+        padding: 8px;
+      }
+
+      .antes-depois div{
+        width: 50%;
+      }
+
       .antes-depois img{
-        height: 150px;
+        height: 180px;
       }
 
       .gallery figcaption{
         padding: 10px;
+      }
+
+      .label{
+        font-size: 0.75rem;
+      }
+
+      .desc{
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Para telas muito pequenas (menos de 320px) */
+    @media (max-width: 320px) {
+      .antes-depois img{
+        height: 100px;
+      }
+      
+      .gallery figcaption{
+        padding: 8px;
       }
     }
   </style>
@@ -336,7 +367,9 @@
 
   <section class="intro">
     <h2><i>Bem-vindo</i></h2>
-    <p>Este espaço é um mural dedicado a preservar e compartilhar lembranças de um passado verde através de fotografias antigas de locais onde predominavam áreas verdes, rios, árvores e praças arboizadas, a fim de valorizar as lembranças de antepassados e estimular uma reflexão críticas sobre o impacto da urbanização.</p>
+    <p>O Projeto "História e Memória: lembranças de um passado verde" não só registrou a história ambiental local, mas também
+consolidou um espaço de aprendizado e reflexão sobre o futuro da comunidade, reafirmando o papel da educação como
+instrumento para a construção de uma cidadania mais consciente e comprometida com a sustentabilidade.</p>
   </section>
 
   <main>
@@ -354,12 +387,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Escola Maria Aguiar Ubajara-CE</h3>
+          <h3>Escola Maria Aguiar, Ubajara-CE</h3>
           <p class="desc">Entrevistado: Carlos Eduardo <br>
 
-           <br>Idade: 35 anos 
+           <br>Idade: 35 anos <br> 
 
-           <br>Relato: me lembro de como era explora o local vivia brincando com meus amigos por lá, meu pai já me disse uma vez que esse local viraria uma escola mais eu não acreditava que um dia esse local se tornaria uma escola mais hoje aos meus 35 anos vejo como o tempo passa rápido e devemos aproveitar cada segundo.</p>
+           <br>Relato: Me lembro de como era explora o local, vivia brincando com meus amigos por lá, meu pai já me disse uma vez que esse local viraria uma escola mais eu não acreditava que um dia esse local se tornaria uma escola mais hoje aos meus 35 anos vejo como o tempo passa rápido e devemos aproveitar cada segundo.</p>
         </figcaption>
       </figure>
 
@@ -375,8 +408,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Nova Veneza Ubajara-CE</h3>
-          <p class="desc">O jardim vertical tornou o espaço escolar mais fresco e acolhedor.</p>
+          <h3>Nova Veneza, Ubajara-CE</h3>
+          <p class="desc">Entrevistada: Ana Paula Araújo Silva <br><br>
+
+            Idade: 42 anos <br><br>
+
+            Relato: Era muito bom quando tínhamos a árvore, pois ali esperávamos o ônibus, conversávamos, ríamos e passávamos o tempo juntos. A sombra trazia frescor nos dias quentes e parecia até tornar a espera mais leve. Depois que a cortaram, tudo mudou: o lugar ficou vazio, sem vida, e já não era mais o mesmo ponto de encontro que guardava tantas lembranças..</p>
         </figcaption>
       </figure>
 
@@ -392,8 +429,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Praça do Turismo Ubajara-CE</h3>
-          <p class="desc">Local histórico restaurado, unindo tradição e modernidade.</p>
+          <h3>Praça do Turismo, Ubajara-CE</h3>
+          <p class="desc">Entrevistado: Eugênio Helder Vasconcelos Eufrásio  <br><br>
+
+Idade:61 <br><br>
+
+Relato: Lembro que quando eu era culumim ia eu e meus irmãos brincando nesse parque, brincadeiras como pega-pega esconde-esconde ou só subir nas árvores..</p>
         </figcaption>
       </figure>
 
@@ -409,8 +450,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Sítio Tucuns Ubajara-CE</h3>
-          <p class="desc">Um espaço coletivo de cultivo e lazer, símbolo de união.</p>
+          <h3>Sítio Tucuns, Ubajara-CE</h3>
+          <p class="desc">Andreina Silva Lima Tomás <br><br>
+
+Idade: 36 anos <br><br>
+
+Relato: Quando eu era jovem, eu e minhas amigas íamos a pé tomar banho na barragem. Naquele tempo era um lugar simples e tranquilo, só natureza e silêncio, onde a gente se divertia e relaxava. Hoje a barragem continua, mas com o surgimento de bares ao redor, mais movimento e barulho de carros e uma certa poluição sonora..</p>
         </figcaption>
       </figure>
 
@@ -426,8 +471,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Ubajara-CE</h3>
-          <p class="desc">O prédio ganhou luz natural e áreas verdes para estudo.</p>
+          <h3>Sitio Barra, Ubajara-CE</h3>
+          <p class="desc">Entrevistado: Maria Eduarda <br><br>
+
+Idade: 20 anos <br><br>
+
+Relato: Me traz muitas lembranças agradáveis pois o local dessa imagem era onde eu brincava com meus primos no pé de manga monstrado na imagem mais ao passar dos anos foram construído casas e tirando boa parte do local,mais as minhas boas lembranças continuam intaquitas.</p>
         </figcaption>
       </figure>
 
@@ -443,8 +492,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Jaburuna Ubajara-CE</h3>
-          <p class="desc">Recuperado para receber apresentações culturais em um espaço vivo.</p>
+          <h3>Jaburuna, Ubajara-CE</h3>
+          <p class="desc">Entrevistado: José da Luz <br><br>
+
+Idade: 57 anos <br><br>
+
+Relato: Lembro muito né quando eu era menino, rapaz novo, era bem estreita, muita areia, muito buraco só dava pra passar a bicicleta, carro de boi né e as coisas foram evoluindo e agora cê passa por lá totalmente diferente né uma coisa maravilhosa, linda é de agradecer muito linda.</p>
         </figcaption>
       </figure>
 
@@ -457,7 +510,11 @@
         </div>
         <figcaption>
           <h3>Sítio Suminario Ubajara-CE</h3>
-          <p class="desc">Antes sem cor, agora arborizada e florida para quem caminha.</p>
+          <p class="desc">Entrevistado : Luciele da Silva Basílio <br><br>
+
+Idade :42 anos <br><br>
+
+Relato: A lembrancinha q mim traz deste era um lugar onde havia  vários eventos onde toda a comunidade se movimentava em prol de ações e arrecadações para a própria comunidade , mais ao decorrer do tempo a família q é dona do local precisou construir novas casas e assim a maior parte dos eventos onde era feita ao ar livre foi acabando.</p>
         </figcaption>
       </figure>
 
@@ -469,8 +526,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Sítio Fim do Corrego Tianguá-CE</h3>
-          <p class="desc">Espaço histórico convertido em centro de memória local.</p>
+          <h3>Sítio Fim do Corrego, Tianguá-CE</h3>
+          <p class="desc">Entrevistada: Maria de Fatima <br><br>
+
+Idade:50 anos <br><br>
+
+Relato: Aqui antes era um lugar muito bom, onde brincávamos nas árvores, brincava em um balanço de baixo de uma mangueira e passava muitas tarde com minhas amigas brincando..</p>
         </figcaption>
       </figure>
 
@@ -482,8 +543,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Ibiapina-CE</h3>
-          <p class="desc">Reformada, conectando tradição e novos tempos.</p>
+          <h3>Jurema Sul, Ibiapina-CE</h3>
+          <p class="desc">Entrevistada: Rita Maria Gomes Silva <br><br>
+
+Idade: 47 anos <br><br>
+
+Relato: Antes, existia um córrego conhecido como Batinga e, ao lado dele, uma pequena barragem. Quando aconteciam as novenas, eu precisava levar a sandália na mão e ir de chinela. Hoje, esse lugar se transformou em um loteamento, onde estão sendo construídos vários lotes de terra, e uma das maiores construções é o posto de gasolina.</p>
         </figcaption>
       </figure>
 
@@ -500,7 +565,11 @@
         </div>
         <figcaption>
           <h3>Jaburuna Ubajara-CE</h3>
-          <p class="desc">Recuperado como espaço de educação ambiental.</p>
+          <p class="desc">Entrevistada : Cecília Bastos de Lima <br><br>
+
+Idade : 38 anos <br><br>
+
+Relato: Antes da construção, aquele terreno era só  mato e árvores espalhadas. Eu costumava me sentar à sombra das árvores, ali também ficavam os animais como cavalos e bois, havia muitas frutas das árvores ali. Quando construíram a igreja, tudo isso passou de não existir naquele local,mas também vi nascer ali um novo espaço de encontro e esperança.</p>
         </figcaption>
       </figure>
 
@@ -516,8 +585,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Ubajara-CE</h3>
-          <p class="desc">Símbolo da cidade restaurado para encontros culturais.</p>
+          <h3>Sítio portós, Ubajara-CE</h3>
+          <p class="desc">Entrevistado: Gabriely Galdino da Silva Rodrigues <br><br>
+
+Idade: 15 anos <br><br>
+
+Relato: Lembro das brincadeiras que faziamos, de casinha, subir nas árvores e de nós divertir com os amigos.</p>
         </figcaption>
       </figure>
 
@@ -533,8 +606,12 @@
           </div>
         </div>
         <figcaption>
-          <h3>Quadra </h3>
-          <p class="desc">Transformada em espaço criativo e de inovação.</p>
+          <h3>Quadra CSU, Ibiapina-CE</h3>
+          <p class="desc">Entrevistada: Rita Maria Gomes Silva <br><br>
+
+Idade: 47 anos <br><br>
+
+Relato: Antes, era um lugar onde aconteciam muitos eventos, funcionando como um centro de eventos. Ao redor, havia várias árvores que deixavam o ambiente muito natural e agradável. Hoje, foi construída a quadra, conhecida como CSU.</p>
         </figcaption>
       </figure>
     </section>
@@ -554,7 +631,7 @@
       
       <div class="footer-section">
         <h4>Orientação</h4>
-        <p>Prof. Benedito Prado</p>
+        <p>Prof. Benedito Braz</p>
         <p>Profa. Simone Feijó</p>
       </div>
       <div class="alunoss">
