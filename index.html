@@ -3,13 +3,330 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>História & Memória — Lembranças de um Passado Verde</title>
-  <link rel="stylesheet" href="src/style.css">
+  <title>História & Memória – Lembranças de um Passado Verde</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    :root{
+      --verde:#2E7D32;
+      --verde-escuro:#1B5E20;
+      --bege:#F8F4EC;
+      --marrom:#5D4631;
+      --branco:#F8F4EC;
+      --sombra: 0 4px 20px rgba(0,0,0,.12);
+      --radius: 5px;
+    }
+
+    body{
+      background: var(--bege);
+      color: var(--marrom);
+      line-height:1.6;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    header{
+      background: var(--verde);
+      color: var(--branco);
+      padding: 20px;
+      text-align: center;
+      box-shadow: var(--sombra);
+      min-height: 19vh;
+      line-height: 1.0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header .logo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:15px;
+      flex-wrap: wrap;
+    }
+
+    header h1{
+      font-family: "Updock", cursive;
+      font-weight: 400;
+      font-style: normal;
+      font-size: clamp(1.8rem, 4vw, 3.5rem);
+    }
+
+    header p{
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      opacity:.9;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .logo img{
+      border-radius: 100%;
+      width: clamp(60px, 8vw, 90px);
+      height: clamp(60px, 8vw, 90px);
+    }
+
+    .intro{
+      max-width:900px;
+      margin:30px auto;
+      padding:20px;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--sombra);
+      text-align:center;
+    }
+
+    .intro h2{
+      color:var(--verde-escuro);
+      margin-bottom:15px;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .intro p{
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      line-height: 1.6;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap:20px;
+      padding:30px 15px;
+      max-width:1300px;
+      margin:auto;
+    }
+
+    .gallery figure{
+      background: var(--branco);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--sombra);
+      display:flex;
+      flex-direction:column;
+      transition: transform .3s ease;
+    }
+
+    .gallery figure:hover{
+      transform: translateY(-6px);
+    }
+
+    .antes-depois{
+      display:flex;
+      gap:8px;
+      padding:10px;
+    }
+
+    .antes-depois div{
+      flex:1;
+      text-align:center;
+    }
+
+    .antes-depois img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:2px;
+      display:block;
+    }
+
+    .label{
+      font-size:0.85rem;
+      font-weight:600;
+      margin-top:4px;
+      color:var(--verde-escuro);
+    }
+
+    .gallery figcaption{
+      padding:14px;
+      font-size:0.95rem;
+      color:var(--verde-escuro);
+    }
+
+    .gallery h3{
+      margin:0 0 8px;
+      font-size:1.1rem;
+      color:var(--marrom);
+    }
+
+    .desc{
+      font-size:0.85rem;
+      color:#444;
+      background:#fdfcf9;
+      padding:8px 10px;
+      border-radius:2px;
+      line-height: 1.4;
+    }
+
+    .categoria, .professores{
+      width: 100%;
+      min-height: 10vh;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    .categoria .CH, .professores .profs{
+      color: var(--verde-escuro);
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      text-align: center;
+    }
+
+    .cat, .profs2{
+      border: 2px solid #1b5e1fd5;
+      width: 100%;
+      text-align: center;
+      background-color: #44444418;
+      font-weight: 700;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .cat h3, .profs2 h3{
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    .alunos{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      padding: 0 15px;
+    }
+
+    .alunos img{
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      box-shadow: var(--sombra);
+    }
+
+    footer{
+      background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde) 100%);
+      color: var(--branco);
+      padding: 40px 20px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-content{
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .footer-section h4{
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--bege);
+      font-family: "Updock", cursive;
+    }
+
+    .alunoss h4{
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--bege);
+      font-family: "Updock", cursive;
+    }
+
+    .footer-section p{
+      font-size: 0.95rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .footer-section .escola{
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--bege);
+      margin-bottom: 5px;
+    }
+
+    .footer-bottom{
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 30px;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Media Queries para melhor responsividade */
+    @media (max-width: 768px) {
+      header .logo{
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .gallery{
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+      }
+
+      .antes-depois{
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .antes-depois div{
+        width: 100%;
+      }
+
+      .antes-depois img{
+        height: 200px;
+      }
+
+      .intro{
+        margin: 20px 10px;
+        padding: 15px;
+      }
+
+      footer{
+        padding: 30px 15px 15px;
+      }
+
+      .footer-content{
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header{
+        padding: 15px 10px;
+      }
+
+      .gallery{
+        padding: 15px 5px;
+      }
+
+      .antes-depois img{
+        height: 150px;
+      }
+
+      .gallery figcaption{
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img class="logo" width="90px" height="90px" src="img/ChatGPT_Image_25_de_ago._de_2025__19_09_49-removebg-preview.png" alt="">
+      <img class="logo" src="img/ChatGPT_Image_25_de_ago._de_2025__19_09_49-removebg-preview.png" alt="Logo">
       <div>
         <h1>História & Memória</h1>
         <p><i>Lembranças de um Passado Verde</i></p>
@@ -19,13 +336,13 @@
 
   <section class="intro">
     <h2><i>Bem-vindo</i></h2>
-    <p>Este espaço é um mural dedicado a preservar e compartilhar lembranças de um passado verde através de fotografias antigas de locais onde predominavam áreas verdes, rios, árvores e praças arbonizadas, a fim de valorizar as lembranças de antepassados e estimular uma reflexão críticas sobre o impacto da urbanização.</p>
+    <p>Este espaço é um mural dedicado a preservar e compartilhar lembranças de um passado verde através de fotografias antigas de locais onde predominavam áreas verdes, rios, árvores e praças arboizadas, a fim de valorizar as lembranças de antepassados e estimular uma reflexão críticas sobre o impacto da urbanização.</p>
   </section>
 
   <main>
     <section class="gallery">
       <!-- 16 cards com antes e depois -->
-      <figure>
+     <figure>
         <div class="antes-depois">
           <div>
             <img src="img/Captura de tela 2025-08-24 081414.png" alt="Praça Central Antes">
@@ -38,7 +355,11 @@
         </div>
         <figcaption>
           <h3>Escola Maria Aguiar Ubajara-CE</h3>
-          <p class="desc">Antes tomada pelo concreto, hoje revitalizada com árvores e bancos para convivência.</p>
+          <p class="desc">Entrevistado: Carlos Eduardo <br>
+
+           <br>Idade: 35 anos 
+
+           <br>Relato: me lembro de como era explora o local vivia brincando com meus amigos por lá, meu pai já me disse uma vez que esse local viraria uma escola mais eu não acreditava que um dia esse local se tornaria uma escola mais hoje aos meus 35 anos vejo como o tempo passa rápido e devemos aproveitar cada segundo.</p>
         </figcaption>
       </figure>
 
@@ -216,38 +537,36 @@
           <p class="desc">Transformada em espaço criativo e de inovação.</p>
         </figcaption>
       </figure>
-
-     
-
-   
-
-      
     </section>
   </main>
 
-  <div class="categoria">
-     <div class="cat">
-      <h3>Categorias e Áreas de Pesquisa:</h3>
-      </div>
-      <h3 class="CH">Ciências Humanas e Sociais Aplicadas - CH</h3>
-    </div>
-
-    <div class="professores">
-      <div class="profs2">
-      <h3 class="prof1">Professores orientadores:</h3>
-      </div>
-      <h3 class="profs">Prof. Benedito e Profa. Simone Feijó</h3>
-    </div>
-
-    <div class="alunos">
-      <img src="./img/alunos.png" alt="lista de alunos">
-    </div>
-
-
   <footer>
-    © <span id="year"></span>
-    <h3 class="escola">Escola Profissionalizante Governador Waldemar Alcântara</h3>
-     História & Memória — Lembranças de um Passado Verde
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>História & Memória</h4>
+        <p>Preservando as lembranças de um passado verde através da memória coletiva e da valorização do patrimônio ambiental e cultural.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Instituição</h4>
+        <p>Escola Profissionalizante Governador Waldemar Alcântara</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Orientação</h4>
+        <p>Prof. Benedito Prado</p>
+        <p>Profa. Simone Feijó</p>
+      </div>
+      <div class="alunoss">
+        <h4>Alunos</h4>
+        <p>Ana Beatriz Souza, Ana Lara Gomes, Clarise Lima, Davi Moreira, Felipe José Moreira, Kayky Galdino, Iara Lima, João Marcelo Sousa, Maria Emily Lima, Maria Gisele Parente, Maria Clarice Basílio, Wirllen Vieira</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> História & Memória – Lembranças de um Passado Verde</p>
+      <p>Projeto desenvolvido com dedicação pelos alunos da EPGWA</p>
+    </div>
   </footer>
 
   <script>
